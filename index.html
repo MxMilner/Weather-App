@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6a0311c722.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="container">
+    <h1 id="city">
+      Spring,Tx </id> <i class="fa-solid fa-cloud"></i></h1>
+    <ul>
+    <li id="date"></li>
+    </ul>
+    <script src="src/index.js"></script>
+       <div class="container">
+        <div class="Changecity">
+        <form class="search-form" id="search-form">
+            <div class="form-group">
+              <div class="row">
+              <label for="changecity"></label>
+              <div class="col-6">
+              <input 
+              type="search" 
+              class="form-control" 
+              placeholder="Change City" 
+              id="city-input" >
+              </div>
+             <div class="col-3">
+              <button 
+             type="submit" 
+             value="Search" 
+             class="btn btn-primary w-100">Search</button> 
+              </div>  
+              <div class="col-3">
+                <button
+                  class="btn btn-success w-100"
+                  id="current-location-button"
+                >
+                  Current
+                </button>
+              </div>
+            </div> 
+          </div>
+             </form>
+            </div>
+            </div>
+         
+        </div>
+ 
+
+    <div class="row">
+<div class="col-6">
+  <h3><strong>High:</strong><span class="temperature" id="temperature"></span
+    ><span class="units">
+      <a href="#" id="celsius-link">°C</a> |
+      <a href="#" id="fahrenheit-link">°F</a>
+    </span>
+</div>
+
+<div class="col-6">
+  <h3><strong>Precipitation:</strong> 20%</h3>
+</div>
+<div class="col-6">
+  <h3><strong>Air Quality:</strong> Moderate</h3>
+</div>
+<div class="col-6">
+  <h3><strong>Humidity:</strong> 58%</h3>
+</div>
+<div class="col-6">
+  <h3><strong>UV Index:</strong> 3/10</h3>
+</div>
+
+  </div>
+</div>
+<p class=h2><h2>The Week Ahead:</h2></p>
+<div class="row">
+    <div class="card" style="width: 10rem;">
+      <div class="card-body">
+        <h5 class="card-title">Monday</h5>
+        <h4><i class="fa-solid fa-cloud-showers-heavy"></i></h4>
+        <h6>Rainy <br> 92% rain</h6>
+        <p class="card-text">
+          <ul>
+          <li>High: 51°</li>
+          <li>Low: 42°</li>
+         </ul>
+        </p>
+
+      </div>
+    </div>
+    <div class="card" style="width: 10rem;">
+  
+        <div class="card-body">
+          <h5 class="card-title">Tuesday</h5>
+          <h4><i class="fa-solid fa-cloud"></i></h4><p class="card-text">
+            <h6> Cloudy <br> 15% rain </h6>
+              <ul>
+                  <li>High: 63°</li>
+                  <li>Low: 47°</li>
+                 </ul>
+          </p>
+
+        </div>
+        
+      </div>
+      <div class="card" style="width: 10rem;">
+          <div class="card-body">
+            <h5 class="card-title">Wednesday</h5>
+            <h4><i class="fa-solid fa-cloud-showers-heavy"></i></h4><p class="card-text">
+              <h6>Showers <br> 42% rain </h6>
+                <ul>
+                    <li>High: 63°</li>
+                    <li>Low: 52°</li>
+                   </ul>
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 10rem;">
+
+            <div class="card-body">
+              <h5 class="card-title">Thursday</h5>
+              <h4><i class="fa-solid fa-cloud-showers-heavy"></i></h4>
+             <h6>Showers <br> 56% rain</h6>
+              <p class="card-text">
+                  <ul>
+                      <li>High: 68°</li>
+                      <li>Low: 47°</li>
+                     </ul>
+              </p>
+            </div>
+            
+          </div>
+          <div class="card" style="width: 10rem;">
+        
+              <div class="card-body">
+                <h5 class="card-title">Friday</h5>
+                <h4><i class="fa-solid fa-cloud-showers-heavy"></i></h4>
+                <h6>Showers  <br> 37% rain</h6>
+                <p class="card-text">
+                    <ul>
+                        <li>High: 63°</li>
+                        <li>Low: 45°</li>
+                       </ul>
+                </p>
+              </div>
+              
+            </div>
+            <div class="card" style="width: 10rem;">
+
+         
+                <div class="card-body">
+                  <h5 class="card-title">Saturday</h5>
+                   <h4><i class="fa-solid fa-cloud-sun"></i></h4>
+                   <h6>Partly Cloudy <br> 19% rain</h6>
+                   <p class="card-text">
+                        <ul>
+                          <li>High: 63°</li>
+                          <li>Low: 46°</li>
+                         </ul>
+                  </p>
+                </div>
+                
+              </div>
+              <div class="card" style="width: 10rem;">
+
+            
+                  <div class="card-body">
+                    <h5 class="card-title">Sunday</h5>
+                    <h4><i class="fa-solid fa-cloud-sun"></i></h4><p class="card-text">
+                      <h6>Mostly Sunny <br> 13% rain </h6>
+                      <ul>
+                            <li>High: 63°</li>
+                            <li>Low: 45°</li>
+                           </ul>
+                    </p>
+
+                  </div>
+                  
+                </div>
+  </body>
+</html>

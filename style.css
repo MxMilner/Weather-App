@@ -1,0 +1,42 @@
+h1 {
+  color: blue;
+}
+
+.changcity {
+  position: absolute;
+  top: 80px;
+  right: 100;
+  width: 200px;
+  height: 100px;
+}
+
+.row {
+  padding: 15px;
+}
+p.h2 {
+  text-align: center;
+  padding: 25px;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h5 {
+  text-align: center;
+}
+h4 {
+  text-align: center;
+}
+.card {
+  margin: 3px;
+}
+h3 {
+  font-size: 20px;
+}
+
+li {
+  list-style: none;
+  font-size: 20px;
+}

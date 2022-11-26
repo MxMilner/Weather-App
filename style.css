@@ -1,5 +1,9 @@
 h1 {
-  color: blue;
+  color: #878787;
+  font-size: 30px;
+  font-weight: 250;
+  line-height: 28px;
+  margin-bottom: 5px;
 }
 .container {
   margin-top: 150px;
@@ -9,11 +13,21 @@ h1 {
 .weatherApp-wrapper {
   max-width: 600px;
   margin: 30px auto;
+  border: 1px solid black;
+  border-radius: 40px;
+  padding: 50px 30px;
 }
 
-.weatherApp {
-  padding: 40px 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid #dadde1;
-  border-radius: 40px;
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+  color: rgb (135, 135, 135);
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+  padding: 0;
+  margin: 0;
 }

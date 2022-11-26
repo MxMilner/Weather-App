@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/6a0311c722.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style.js">
   </head>
  
@@ -29,6 +29,7 @@
                     </div>
                 </form>
                 <div class="WeatherInfo">
+                    <div class="WeatherOverview">
                     <div class="row">
                         <div class="col-6">
                             <h1>Spring</h1>
@@ -52,16 +53,17 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-8">
-                            <div class="temperature-container d-flex justify-content-end">
- <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"> 
+                    <div class="col-lg-6 col-md-6 col-sm-8">
+                            <div class="d-flex justify-content-end weather-temperature">
+                                    <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny" id="icon"/> 
                                     <div>
-                                        <span class="temperature">18</span>
-                                        <span class="unit">˚C</span>
+                                        <span class="temperature">18</span><span class="unit"><a href="#">˚C </a>|<a href="#">˚F</a> </span>
                                     </div>
                             </div>
                         </div>
                     </div>
+                    </div>
+                        
                 </div>
                 <div class="WeatherForcast row">
                     <div class="col">
@@ -115,14 +117,15 @@
                         </div>
                     </div>
                 </div>
-                <footer>
+               
+            
+        </div>
+    </div>
+     <footer>
 This project was coded by Mx. Milner and is 
 <a href="https://github.com/MxMilner/Weather-App" target="_blank"> sourced on github</a> 
 and <a href="https://classy-malabi-1f4674.netlify.app" target="_blank">hosted on Netlify.</a>
                 </footer>
-            
-        </div>
-    </div>
 </div>
  </body>
 </html>

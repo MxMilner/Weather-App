@@ -3,8 +3,6 @@
   <head>
     <title>Weather App</title>
     <meta charset="UTF-8" />
-    
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <html lang="en">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,8 +11,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.js">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>   
+<link rel="stylesheet" href="style.css">
   </head>
  
 <body>
@@ -35,7 +33,7 @@
                     <div class="WeatherOverview">
                     <div class="row">
                         <div class="col-sm-4">
-                            <h1>Spring</h1>
+                            <h1 id="city"></h1>
                             </div>
                           <div class="col-sm-4">
                             <ul>
@@ -44,7 +42,7 @@
                                         17:21
                                </li> 
                                <li class="descToday">
-                                  <strong>scattered clouds</strong>  
+                                  scattered clouds
                                 </li>
                                 <li class="humidity">
                                     <strong>
@@ -65,7 +63,7 @@
                             <div class="d-flex justify-content-end weather-temperature">
                                     <i class="fa-regular fa-sun fa-4x" style="color: #878787; padding: 20px 0px"></i>
                                      <div class="current-temp">
-                                            <span class="temperature">18</span><span class="unit"><a href="#">˚C </a>|<a href="#">˚F</a> </span>
+                                            <span class="temperature" id="currentTemp"></span><span class="unit"><a href="#">˚C </a>|<a href="#">˚F</a> </span>
                                     </div>
                             </div>
                         </div>
@@ -146,6 +144,9 @@ This project was coded by Mx. Milner and is
 <a href="https://github.com/MxMilner/Weather-App" target="_blank"> sourced on github</a> 
 and <a href="https://classy-malabi-1f4674.netlify.app" target="_blank">hosted on Netlify.</a>
 </footer>
+
 </div>
+
+<script src="style.js"></script>
 </body>
 </html>

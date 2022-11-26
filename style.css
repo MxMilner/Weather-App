@@ -24,11 +24,22 @@ ul {
 li {
   list-style: none;
   color: rgb (135, 135, 135);
-  font-size: 16px;
   font-weight: 100;
   line-height: 19px;
   padding: 0;
   margin: 0;
+}
+li.today {
+  font-size: 20px;
+  font-weight: strong;
+}
+li.humidity {
+  font-size: 16px;
+  padding: 3px;
+}
+li.wind {
+  font-size: 16px;
+  padding: 3px;
 }
 .container {
   margin-top: 150px;
@@ -47,8 +58,14 @@ li {
 .WeatherOverview {
   margin: 20px;
 }
-.weather-temperature img {
+.WeatherForecastImg {
+  size: 50px;
 }
+.current-temp {
+  padding: 10px;
+  font-size: 25px;
+}
+
 .weather-temperature .temperature {
   color: #878787;
 }

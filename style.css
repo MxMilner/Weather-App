@@ -8,10 +8,11 @@ body {
 
 h1 {
   color: #407088;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 250;
   line-height: 28px;
   margin-bottom: 10px;
+  padding: 40px 0px;
 }
 footer {
   text-align: center;

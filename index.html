@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Parcel Sandbox</title>
+    <title>Weather App</title>
     <meta charset="UTF-8" />
     <link href="src/styles.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -13,178 +13,115 @@
 
   </head>
   <body>
-    <div class="container">
-    <h1 id="city">
-      Spring,Tx </id> <i class="fa-solid fa-cloud"></i></h1>
-    <ul>
-    <li id="date"></li>
-    </ul>
-    <script src="src/index.js"></script>
-       <div class="container">
-        <div class="Changecity">
-        <form class="search-form" id="search-form">
-            <div class="form-group">
-              <div class="row">
-              <label for="changecity"></label>
-              <div class="col-6">
-              <input 
-              type="search" 
-              class="form-control" 
-              placeholder="Change City" 
-              id="city-input" >
-              </div>
-             <div class="col-3">
-              <button 
-             type="submit" 
-             value="Search" 
-             class="btn btn-primary w-100">Search</button> 
-              </div>  
-              <div class="col-3">
-                <button
-                  class="btn btn-success w-100"
-                  id="current-location-button"
-                >
-                  Current
-                </button>
-              </div>
-            </div> 
-          </div>
-             </form>
-            </div>
-            </div>
-         
-        </div>
- 
-
-    <div class="row">
-<div class="col-6">
-  <h3><strong>High:</strong><span class="temperature" id="temperature"></span
-    ><span class="units">
-      <a href="#" id="celsius-link">°C</a> |
-      <a href="#" id="fahrenheit-link">°F</a>
-    </span>
-</div>
-
-<div class="col-6">
-  <h3><strong>Precipitation:</strong> 20%</h3>
-</div>
-<div class="col-6">
-  <h3><strong>Air Quality:</strong> Moderate</h3>
-</div>
-<div class="col-6">
-  <h3><strong>Humidity:</strong> 58%</h3>
-</div>
-<div class="col-6">
-  <h3><strong>UV Index:</strong> 3/10</h3>
-</div>
-
-  </div>
-</div>
-<p class=h2><h2>The Week Ahead:</h2></p>
-<div class="row">
-    <div class="card" style="width: 10rem;">
-      <div class="card-body">
-        <h5 class="card-title">Monday</h5>
-        <h4><i class="fa-solid fa-cloud-showers-heavy"></i></h4>
-        <h6>Rainy <br> 92% rain</h6>
-        <p class="card-text">
-          <ul>
-          <li>High: 51°</li>
-          <li>Low: 42°</li>
-         </ul>
-        </p>
-
-      </div>
-    </div>
-    <div class="card" style="width: 10rem;">
-  
-        <div class="card-body">
-          <h5 class="card-title">Tuesday</h5>
-          <h4><i class="fa-solid fa-cloud"></i></h4><p class="card-text">
-            <h6> Cloudy <br> 15% rain </h6>
-              <ul>
-                  <li>High: 63°</li>
-                  <li>Low: 47°</li>
-                 </ul>
-          </p>
-
-        </div>
-        
-      </div>
-      <div class="card" style="width: 10rem;">
-          <div class="card-body">
-            <h5 class="card-title">Wednesday</h5>
-            <h4><i class="fa-solid fa-cloud-showers-heavy"></i></h4><p class="card-text">
-              <h6>Showers <br> 42% rain </h6>
-                <ul>
-                    <li>High: 63°</li>
-                    <li>Low: 52°</li>
-                   </ul>
-            </p>
-          </div>
-        </div>
-        <div class="card" style="width: 10rem;">
-
-            <div class="card-body">
-              <h5 class="card-title">Thursday</h5>
-              <h4><i class="fa-solid fa-cloud-showers-heavy"></i></h4>
-             <h6>Showers <br> 56% rain</h6>
-              <p class="card-text">
-                  <ul>
-                      <li>High: 68°</li>
-                      <li>Low: 47°</li>
-                     </ul>
-              </p>
-            </div>
-            
-          </div>
-          <div class="card" style="width: 10rem;">
-        
-              <div class="card-body">
-                <h5 class="card-title">Friday</h5>
-                <h4><i class="fa-solid fa-cloud-showers-heavy"></i></h4>
-                <h6>Showers  <br> 37% rain</h6>
-                <p class="card-text">
-                    <ul>
-                        <li>High: 63°</li>
-                        <li>Low: 45°</li>
-                       </ul>
-                </p>
-              </div>
-              
-            </div>
-            <div class="card" style="width: 10rem;">
-
-         
-                <div class="card-body">
-                  <h5 class="card-title">Saturday</h5>
-                   <h4><i class="fa-solid fa-cloud-sun"></i></h4>
-                   <h6>Partly Cloudy <br> 19% rain</h6>
-                   <p class="card-text">
-                        <ul>
-                          <li>High: 63°</li>
-                          <li>Low: 46°</li>
-                         </ul>
-                  </p>
+<div id="root">
+    <div class="App">
+        <div class="container">
+            <div class="weather">
+                <form>
+                    <div class="row">
+                        <div class="col-9">
+                            <input type="search" placeholder="Enter a city..." class="form-control search-input">
+                        </div>
+                        <div class="col-3 p-0">
+                            <input type="submit" class="btn btn-primary w-100" value="Search">
+                        </div>
+                    </div>
+                </form>
+                <div class="WeatherInfo">
+                    <div class="row">
+                        <div class="col-6">
+                            <h1>Spring</h1>
+                            <ul>
+                                <li>
+                                    <span>
+                                        Friday
+                                        17:21,
+                                    </span>
+                                     scattered clouds
+                                </li>
+                                <li>
+                                    Humidity: 
+                                    <strong>
+                                        41%,
+                                    </strong>
+                                    Wind:
+                                    <strong>
+                                        3.31 km/h
+                                    </strong>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-8">
+                            <div class="temperature-container d-flex justify-content-end">
+                                <canvas width="52" height="52">
+                                    <div>
+                                        <span class="temperature">18</span>
+                                        <span class="unit">˚C</span>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-              </div>
-              <div class="card" style="width: 10rem;">
-
-            
-                  <div class="card-body">
-                    <h5 class="card-title">Sunday</h5>
-                    <h4><i class="fa-solid fa-cloud-sun"></i></h4><p class="card-text">
-                      <h6>Mostly Sunny <br> 13% rain </h6>
-                      <ul>
-                            <li>High: 63°</li>
-                            <li>Low: 45°</li>
-                           </ul>
-                    </p>
-
-                  </div>
-                  
+                <div class="WeatherForcast row">
+                    <div class="col">
+                        <div class="WeatherForcastPreview">
+                            <div class="forecast-time">Fri</div>
+                            <canvas width="38" height="38">
+                            <div class="forecast-temperature">
+                                <span class="forecast-temperature-max">18˚C</span>
+                                <span class="forecast-temperature-min">12˚C</span>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col">
+                    <div class="WeatherForecastPreview">
+                        <div class="forecast-time">Sat</div>
+                        <canvas width="38" height="38">
+                            <div class="forecast-temperature">
+                                <span class="forecast-temperature-max">15˚C</span>
+                                <span class="forecast-temperature-min">12˚C</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="WeatherForecastPreview">
+                            <div class="forecast-time">Sun </div>
+                            <canvas width="38" height="38">
+                            <div class="forecast-temperature">
+                                <span class="forecast-temperature-max">15˚C</span>
+                                <span class="forecast-temperature-min">11˚C</span>
+                            </div>
+                        </div>
+                    </div>
+                       <div class="col">
+                        <div class="WeatherForecastPreview">
+                            <div class="forecast-time">Mon </div>
+                            <canvas width="38" height="38">
+                            <div class="forecast-temperature">
+                                <span class="forecast-temperature-max">13˚C</span>
+                                <span class="forecast-temperature-min">11˚C</span>
+                            </div>
+                        </div>
+                    </div>
+                       <div class="col">
+                        <div class="WeatherForecastPreview">
+                            <div class="forecast-time">Tues </div>
+                            <canvas width="38" height="38">
+                            <div class="forecast-temperature">
+                                <span class="forecast-temperature-max">12˚C</span>
+                                <span class="forecast-temperature-min">9˚C</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              <p>Coded by   <a href="https://github.com/MxMilner/Weather-App">Mx.Milner</a></p>
+                <footer>
+This project was coded by Mx. Milner and is <a href="https://github.com/MxMilner/Weather-App" target="_blank">sourced on github</a> and <a href="https://classy-malabi-1f4674.netlify.app" target="_blank">hosted on Netlify.</a>
   </body>
+
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+
 </html>

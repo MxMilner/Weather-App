@@ -1,9 +1,15 @@
 body {
-  background: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+  background: linear-gradient(
+    243deg,
+    rgb(255, 253, 221) 13.4%,
+    rgb(248, 215, 215) 82.1%
+  );
+
   background-size: cover;
   background-position: top;
   font-family: "Urbanist", sans-serif;
-  height: 100vh;
+  min-height: 100vh;
+  margin: 0 auto;
 }
 
 h1 {
@@ -37,24 +43,26 @@ li.today {
 li.descToday {
   font-size: 20px;
   padding: 3px;
+  text-transform: capitalize;
 }
 li.humidity {
-  font-size: 18px;
+  font-size: 20px;
   padding: 3px;
 }
 li.wind {
-  font-size: 18px;
+  font-size: 20px;
   padding: 3px;
 }
 .container {
-  margin-top: 150px;
+  width: 800px;
+  margin: 0 auto;
   align-items: center;
 }
 
 .weatherApp-wrapper {
   max-width: 700px;
-  margin: 30px auto;
-  border: 1px solid #407088;
+  margin: 40px auto;
+  border: 2px solid #407088;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 40px;
   padding: 50px 30px;

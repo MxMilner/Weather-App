@@ -63,7 +63,7 @@ li.wind {
   max-width: 700px;
   margin: 40px auto;
   border: 2px solid #407088;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 40px;
   padding: 50px 30px;
 }
@@ -73,8 +73,8 @@ li.wind {
 }
 
 .current-temp {
-  padding: 40px 10px;
-  font-size: 25px;
+  padding: 40px 0px;
+  font-size: 22px;
 }
 .WeatherForecastPreview {
   text-align: center;

@@ -42,10 +42,11 @@
                 <div class="WeatherInfo">
                     <div class="WeatherOverview">
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <h1 id="city"></h1>
                             </div>
                           <div class="col-sm-4">
+                            <div class="descToday">
                             <ul>
                                 <li class="today" id="date">
                                     
@@ -61,15 +62,17 @@
                                 </li>
                             </ul>
                         </div>
-                        
-                    <div class="col-sm-4">
-                            <div class="d-flex justify-content-end weather-temperature" id="iconToday">
+                        </div>
+                    <div class="col-sm-5">
+                            <div class="d-flex weather-temperature" id="iconToday">
                                     <img
                                     src= "http://openweathermap.org/img/wn/04d@2x.png"
                                     alt="clear"
                                     id="icon">
                                      <div class="current-temp">
-                                            <span class="temperature" id="currentTemp"></span><span class="unit"><a href="#" id="degreeC">˚C </a>|<a href="#" id="degreeF">˚F</a> </span>
+                                            <span class="temperature" id="currentTemp"></span>
+                                            <span class="unit"><a href="#" id="degreeC" class="active">˚C </a>|<a href="#" id="degreeF" class="active">˚F</a> 
+                                        </span>
                                     </div>
                             </div>
                         </div>

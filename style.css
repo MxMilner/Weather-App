@@ -53,6 +53,10 @@ li.wind {
   font-size: 20px;
   padding: 3px;
 }
+div.descToday {
+  margin-left: 50px;
+}
+
 .container {
   width: 800px;
   margin: 0 auto;
@@ -76,6 +80,16 @@ li.wind {
   padding: 40px 0px;
   font-size: 20px;
 }
+
+.current-temp .active {
+  color: #407088;
+  cursor: default;
+}
+
+.current-temp :hover {
+  text-decoration: none;
+}
+
 .WeatherForecastPreview {
   text-align: center;
 }

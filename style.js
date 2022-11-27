@@ -32,6 +32,8 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
+  celciusTemperature = response.data.main.temp;
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -58,9 +60,31 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
+//degree conversion function
 
-// search button defined
-search("Houston");
+function showDegreesFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = Math.round((celciusTemperature * 9) / 5 + 32);
+  let temperatureElement = document.querySelector("#currentTemp");
+  temperatureElement.innerHTML = fahrenheitTemperature;
+}
+
+function showDegreesCelcius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#currentTemp");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+
+let celciusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let degeeF = document.querySelector("#degreeF");
+degreeF.addEventListener("click", showDegreesFahrenheit);
+
+let degeeC = document.querySelector("#degreeC");
+degreeC.addEventListener("click", showDegreesCelcius);
+
+// search button defined
+search("Houston");

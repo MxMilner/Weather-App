@@ -22,7 +22,38 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+// display forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
 
+  let forecastHTML = ` <div class="row">`;
+  let days = ["Thursday", "Friday", "Saturday", "Sunday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+ 
+    <div class="col-2">
+      <div class="weather-forecast-date"> ${day} </div>
+      <div class= "weather-forecast-img"><img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+           alt=""
+           width="36"/>
+    </div>
+          Foggy<br>
+       <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temp-max">18˚</span> 
+          | 
+          <span class="weather-forecast-temp-min"> 12˚</span>
+        </div>
+    </div>
+ 
+  `;
+  });
+  forecastElement.innerHTML = forecastHTML + `</div>`;
+}
+
+//display today's weather
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#currentTemp");
   let cityElement = document.querySelector("#city");
@@ -87,4 +118,5 @@ let degeeC = document.querySelector("#degreeC");
 degreeC.addEventListener("click", showDegreesCelcius);
 
 // search button defined
+displayForecast();
 search("Houston");

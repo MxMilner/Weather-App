@@ -90,11 +90,21 @@ div.descToday {
   text-decoration: none;
 }
 
-.WeatherForecastPreview {
-  text-align: center;
-}
 .forecast-time {
   color: #407088;
   font-weight: 500;
   font-size: 20px;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 20px;
+  color: #407088;
+}
+
+.weather-forecast-temperatures {
+  font-size: 18px;
 }

@@ -39,6 +39,7 @@ function displayForecast(response) {
 
   let forecastHTML = ` <div class="row">`;
   let days = ["Thursday", "Friday", "Saturday", "Sunday"];
+
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
@@ -54,7 +55,10 @@ function displayForecast(response) {
            alt=""
            width="36"/>
     </div>
-          Foggy<br>
+          <div class="weather-forecast-description">${
+            forecastDay.weather[0].description
+          }
+          </div>
        <div class="weather-forecast-temperatures">
           <span class="weather-forecast-temp-max">${Math.round(
             forecastDay.temp.max
@@ -139,10 +143,10 @@ let celciusTemperature = null;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let degeeF = document.querySelector("#degreeF");
+let degreeF = document.querySelector("#degreeF");
 degreeF.addEventListener("click", showDegreesFahrenheit);
 
-let degeeC = document.querySelector("#degreeC");
+let degreeC = document.querySelector("#degreeC");
 degreeC.addEventListener("click", showDegreesCelcius);
 
 // search button defined

@@ -4,12 +4,9 @@ body {
     rgb(255, 253, 221) 13.4%,
     rgb(248, 215, 215) 82.1%
   );
-
-  background-size: cover;
-  background-position: top;
+  height: 100vh;
+  background-repeat: no-repeat;
   font-family: "Urbanist", sans-serif;
-  min-height: 100vh;
-  margin: 0 auto;
 }
 
 h1 {
@@ -58,7 +55,7 @@ div.descToday {
 }
 
 .container {
-  width: 800px;
+  width: 900px;
   margin: 0 auto;
   align-items: center;
 }
@@ -98,6 +95,10 @@ div.descToday {
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
+}
+
+.weather-forecast-temp-min {
+  opacity: 0.5;
 }
 
 .weather-forecast-date {
